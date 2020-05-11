@@ -46,9 +46,6 @@ build/libgroupe_chemploi.a: build/groupe_chemploi.o  | build
 build/test.o: test/main_entreprise.c | build
 	clang -Wall -pedantic  -g -c test/main_entreprise.c -I ./lib -o build/test.o
 
-build/test: build/test.o build/libgroupe_entreprise.a  build/libgroupe_poste.a build/libgroupe_employe.a build/libgroupe_chemploi.a build/libliste.a | build
-	clang build/test.o -Lbuild -lgroupe_entreprise -lgroupe_poste -lgroupe_employe -lgroupe_chemploi  -lliste -o build/test
-
 
 
 # S'assure de l'existence tout les programmes finaux (application, test, etc.)
