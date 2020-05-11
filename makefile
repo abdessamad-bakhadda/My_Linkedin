@@ -53,8 +53,11 @@ build/test: build/test.o build/libgroupe_entreprise.a  build/libgroupe_poste.a b
 
 # S'assure de l'existence tout les programmes finaux (application, test, etc.)
 # Par exemple : all: build/test build/appli
-all: build/test
+all: build/test.o build/libgroupe_entreprise.a  build/libgroupe_poste.a build/libgroupe_employe.a build/libgroupe_chemploi.a build/libliste.a | build
+	clang build/test.o -Lbuild -lgroupe_entreprise -lgroupe_poste -lgroupe_employe -lgroupe_chemploi  -lliste -o build/test
+
 	
 # Lance le programme de test.
-check:
-	./build/test
+check: all
+	./all
+
