@@ -47,6 +47,7 @@ build/test.o: test/main_entreprise.c | build
 	clang -Wall -pedantic  -g -c test/main_entreprise.c -I ./lib -o build/test.o
 
 
+
 # S'assure de l'existence tout les programmes finaux (application, test, etc.)
 # Par exemple : all: build/test build/appli
 all: build/test.o build/libgroupe_entreprise.a  build/libgroupe_poste.a build/libgroupe_employe.a build/libgroupe_chemploi.a build/libliste.a | build
@@ -56,3 +57,4 @@ all: build/test.o build/libgroupe_entreprise.a  build/libgroupe_poste.a build/li
 # Lance le programme de test.
 check: all
 	./all
+
