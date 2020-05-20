@@ -119,7 +119,7 @@ void supprime_profile_entrep(groupe_entreprises* g,groupe_postes* gr,int id)
         {
             while(tmpp)
             {
-                if(((poste*)tmpp->data)->entrep->id == id)
+                if(((poste*)tmpp->data)->entrep && ((poste*)tmpp->data)->entrep->id == id)
                 {
                     if (!tmpp->previous) gr->postes = l_remove(tmpp)  ;
                     else l_remove(tmpp) ;
