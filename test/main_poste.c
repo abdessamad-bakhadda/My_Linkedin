@@ -60,19 +60,19 @@ int main()
             //fclose(db);
         }
         FILE *db = fopen("test/entreprise.csv", "r");
-        groupe_entreprises * gr = ge_open(db,gr);
+        groupe_entreprises * gr = ge_open(db);
 
         // Tests des fonctiosn g_open et gp_size.
         {
              TEST(g!= NULL);
              TEST(gp_size(g) == 5);
-             voir_postes(g) ;
+             voir_postes(g) 
 
         }
         
         //test cree_profile_poste
         {
-            cree_profile_poste(g,gr) ;
+            cree_profile_poste(g) ;
             TEST(gp_size(g) == 5);
             voir_postes(g) ;
         }
