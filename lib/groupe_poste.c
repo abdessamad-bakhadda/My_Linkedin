@@ -8,7 +8,7 @@
 #include <string.h>
 
 ////////////////////////////////////////////////////////// POSTE  ////////////////////////////////////////////////
-groupe_postes* gp_open(FILE *db,groupe_entreprises* gr){
+groupe_postes* gp_open(FILE *db){
     FILE *f;
     char c;
     int ligne = 1 ,ind_sortie_virgule = 0  ,ind_sortie_pt_virgule = 0 , indice_noeud  ;
@@ -20,8 +20,8 @@ groupe_postes* gp_open(FILE *db,groupe_entreprises* gr){
     poste*pos =(poste*)malloc(sizeof(poste)) ;
     groupe_postes* g = (groupe_postes*)malloc(sizeof(groupe_postes)) ;
 
-    //FILE *dba = fopen("test/entreprise.csv", "r");
-    //groupe_entreprises* gr = ge_open(dba);
+    FILE *dba = fopen("test/entreprise.csv", "r");
+    groupe_entreprises* gr = ge_open(dba);
     //fclose(dba);
 
     if(f)
@@ -135,7 +135,7 @@ void supprime_profile_entrep(groupe_entreprises* g,groupe_postes* gr,int id)
     }
 }
 
-void cree_profile_poste(groupe_postes* g,groupe_entreprises* gr)
+void cree_profile_poste(groupe_postes* g)
 {
   int id ;
   char titre[128] ;
@@ -166,8 +166,8 @@ void cree_profile_poste(groupe_postes* g,groupe_entreprises* gr)
 
   printf("id_entreprise = ") ;
   scanf("%d",&id_entreprise) ;
-  //FILE *db = fopen("test/entreprise.csv", "r");
-  //groupe_entreprises * gr = ge_open(db);
+  FILE *db = fopen("test/entreprise.csv", "r");
+  groupe_entreprises * gr = ge_open(db);
   //fclose(db);
   entrep = ge_id(gr,id_entreprise) ;
   ptr->entrep = entrep ;
