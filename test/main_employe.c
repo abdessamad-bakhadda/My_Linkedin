@@ -55,11 +55,11 @@ int main()
 
       FILE *db1 = fopen("test/entreprise.csv", "r");
       groupe_entreprises *gr  = ge_open(db1);
-      fclose(db1);
+      //fclose(db1);
 
       FILE *db = fopen("test/poste.csv", "r");
       groupe_postes *gr1 = gp_open(db);
-      fclose(db);
+      //fclose(db);
 
       voir_postes(gr1) ;
 
@@ -67,7 +67,7 @@ int main()
      {
          FILE *db2 = fopen("test/employe.csv", "r");
          g = gemp_open(db2);
-         fclose(db2);
+         //fclose(db2);
      }
 
      // Tests des fonctiosn g_open et g_size.
