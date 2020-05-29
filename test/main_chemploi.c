@@ -63,6 +63,12 @@ int main()
            g = gch_open(db2);
            //fclose(db2);
        }
+    
+     FILE *db = fopen("test/employe.csv", "r");
+     groupe_employes* gr1 = gemp_open(db);
+    
+    FILE *db = fopen("test/poste.csv", "r");
+    groupe_postes *gr = gp_open(db);
 
      // Tests des fonctiosn g_open et g_size.
      {
@@ -97,8 +103,7 @@ int main()
 
      // Tests de fonction transitionner_chempl_employe
      {
-        FILE *db = fopen("test/employe.csv", "r");
-        groupe_employes* gr1 = gemp_open(db);
+       
         //fclose(db);
 
         voir_employes(gr1) ;
@@ -128,8 +133,7 @@ int main()
 
      // Tests de fonction rechercher_employe_par_competences et par_competences_et_code_postale  .
      {
-         FILE *db = fopen("test/poste.csv", "r");
-         groupe_postes *gr = gp_open(db);
+         
          //fclose(db);
 
          rechercher_poste_chemp_par_competences(gr,g,1) ;
