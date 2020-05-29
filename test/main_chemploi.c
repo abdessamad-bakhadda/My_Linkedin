@@ -64,8 +64,8 @@ int main()
            //fclose(db2);
        }
     
-     FILE *db = fopen("test/employe.csv", "r");
-     groupe_employes* gr1 = gemp_open(db);
+     FILE *db1 = fopen("test/employe.csv", "r");
+     groupe_employes* gr1 = gemp_open(db1);
     
     FILE *db = fopen("test/poste.csv", "r");
     groupe_postes *gr = gp_open(db);
