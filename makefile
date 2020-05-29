@@ -51,7 +51,7 @@ build/test.o: test/main_chemploi.c | build
 # S'assure de l'existence tout les programmes finaux (application, test, etc.)
 # Par exemple : all: build/test build/appli
 all : build/test.o build/libgroupe_entreprise.a  build/libgroupe_poste.a build/libgroupe_employe.a build/libgroupe_chemploi.a build/libliste.a | build
-	clang build/test.o -Lbuild -lgroupe_chemploi -lgroupe_employe -lgroupe_poste -lgroupe_entreprise -lliste -o all
+	clang build/test.o -Lbuild -lgroupe_chemploi -lgroupe_employe -lgroupe_poste -lgroupe_entreprise -lliste -o build/test
 
 	
 # Lance le programme de test.
