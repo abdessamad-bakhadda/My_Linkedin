@@ -131,6 +131,7 @@ int main()
         voir_chemplois(g) ;
      }
 
+    /*
      // Tests de fonction rechercher_employe_par_competences et par_competences_et_code_postale  .
      {
          
@@ -147,6 +148,7 @@ int main()
          rechercher_poste_chemp_par_competences_et_code_postale(gr,g,3,12200) ;
          rechercher_poste_chemp_par_competences_et_code_postale(gr,g,4,12200) ;
      }
+     */
      
      // Tests de fonction rechercher_employe_chemp_par_entreprise et par_competences  .
      {
