@@ -22,7 +22,7 @@ groupe_postes* gp_open(FILE *db){
 
     FILE *dba = fopen("test/entreprise.csv", "r");
     groupe_entreprises* gr = ge_open(dba);
-    fclose(dba);
+    //fclose(dba);
 
     if(f)
     {
@@ -84,7 +84,7 @@ groupe_postes* gp_open(FILE *db){
                 ind_tmp = 0 ;
             }
         }
-        fclose(f);
+        //fclose(f);
     }
     return g;
 }
@@ -168,7 +168,7 @@ void cree_profile_poste(groupe_postes* g)
   scanf("%d",&id_entreprise) ;
   FILE *db = fopen("test/entreprise.csv", "r");
   groupe_entreprises * gr = ge_open(db);
-  fclose(db);
+  //fclose(db);
   entrep = ge_id(gr,id_entreprise) ;
   ptr->entrep = entrep ;
   l_append(&(g->postes),l_make_node((poste*)ptr)) ;
