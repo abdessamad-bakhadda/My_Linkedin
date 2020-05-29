@@ -64,7 +64,7 @@ int main()
     // Tests des fonctiosn g_open et g_size.
     {
          TEST(g!= NULL);
-         TEST(ge_size(g) == 3);
+         TEST(ge_size(g) == 4);
     }
 
     /*
@@ -83,11 +83,11 @@ int main()
     //test supprime_profile_entrep
     {
         supprime_profile_entrep(g,gr,1) ;
-        TEST(ge_size(g) == 2);
+        TEST(ge_size(g) == 3);
         voir_entreprises(g) ;
         voir_postes(gr) ;
         supprime_profile_entrep(g,gr,2) ;
-        TEST(ge_size(g) == 1);
+        TEST(ge_size(g) == 2);
         voir_entreprises(g) ;
         voir_postes(gr) ;
     }
