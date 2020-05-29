@@ -98,12 +98,12 @@ int main()
      // Tests de fonction transitionner_chempl_employe
      {
         FILE *db = fopen("test/employe.csv", "r");
-        groupe_employes* gr = gemp_open(db);
+        groupe_employes* gr1 = gemp_open(db);
         //fclose(db);
 
-        voir_employes(gr) ;
-        transitionner_chempl_employe(g,gr,2,2) ;
-        voir_employes(gr) ;
+        voir_employes(gr1) ;
+        transitionner_chempl_employe(g,gr1,2,2) ;
+        voir_employes(gr1) ;
         voir_chemplois(g) ;
      }
 
@@ -116,13 +116,12 @@ int main()
 
      // Tests de fonction transitionner_employe_chempl
      {
-        FILE *db = fopen("test/employe.csv", "r");
-        groupe_employes* gr = gemp_open(db);
+       
         //fclose(db);
-        voir_employes(gr) ;
-        transitionner_employe_chempl(gr,g,2) ;
-        TEST(gchemp_size(gr) == 3);
-        voir_employes(gr) ;
+        voir_employes(gr1) ;
+        transitionner_employe_chempl(gr1,g,2) ;
+        TEST(gchemp_size(g) == 3);
+        voir_employes(gr1) ;
         TEST(gchemp_size(g) == 7);
         voir_chemplois(g) ;
      }
@@ -147,8 +146,7 @@ int main()
      
      // Tests de fonction rechercher_employe_chemp_par_entreprise et par_competences  .
      {
-         FILE *db = fopen("test/poste.csv", "r");
-         groupe_postes *gr = gp_open(db);
+         
          //fclose(db);
 
          voir_postes(gr) ;
