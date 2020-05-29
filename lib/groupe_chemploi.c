@@ -1,6 +1,5 @@
 #include "groupe_chemploi.h"
-#include "groupe_poste.h"
-#include "groupe_employe.h"
+
 
 #include "liste.h"
 
