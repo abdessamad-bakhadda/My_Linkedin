@@ -57,7 +57,7 @@ int main()
         {
             FILE *db = fopen("test/poste.csv", "r");
             g = gp_open(db);
-            fclose(db);
+            //fclose(db);
         }
 
         // Tests des fonctiosn g_open et gp_size.
