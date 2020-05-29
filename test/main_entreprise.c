@@ -58,7 +58,7 @@ int main()
     {
         FILE *db = fopen("test/entreprise.csv", "r");
         g = ge_open(db);
-        fclose(db);
+        //fclose(db);
     }
 
     // Tests des fonctiosn g_open et g_size.
@@ -79,7 +79,7 @@ int main()
 
     FILE *db = fopen("test/poste.csv", "r");
     groupe_postes *gr = gp_open(db);
-    fclose(db);
+    //fclose(db);
     //test supprime_profile_entrep
     {
         supprime_profile_entrep(g,gr,1) ;
