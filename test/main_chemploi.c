@@ -61,7 +61,7 @@ int main()
        {
            FILE *db2 = fopen("test/chemploi.csv", "r");
            g = gch_open(db2);
-           fclose(db2);
+           //fclose(db2);
        }
 
      // Tests des fonctiosn g_open et g_size.
@@ -71,7 +71,7 @@ int main()
           voir_chemplois(g) ;
      }
 
-     /*
+     
      // Tests de fonction rechercher_chemploi_par_competences et par_competences_et_code_postale  .
      {
          rechercher_chemploi_par_competences(g,1) ;
@@ -99,7 +99,7 @@ int main()
      {
         FILE *db = fopen("test/employe.csv", "r");
         groupe_employes* gr = gemp_open(db);
-        fclose(db);
+        //fclose(db);
 
         voir_employes(gr) ;
         transitionner_chempl_employe(g,gr,2,2) ;
@@ -118,7 +118,7 @@ int main()
      {
         FILE *db = fopen("test/employe.csv", "r");
         groupe_employes* gr = gemp_open(db);
-        fclose(db);
+        //fclose(db);
         voir_employes(gr) ;
         transitionner_employe_chempl(gr,g,2) ;
         EST(emp_size(gr) == 3);
@@ -131,7 +131,7 @@ int main()
      {
          FILE *db = fopen("test/poste.csv", "r");
          groupe_postes *gr = gp_open(db);
-         fclose(db);
+         //fclose(db);
 
          rechercher_poste_chemp_par_competences(gr,g,1) ;
          rechercher_poste_chemp_par_competences(gr,g,2) ;
@@ -144,12 +144,12 @@ int main()
          rechercher_poste_chemp_par_competences_et_code_postale(gr,g,3,12200) ;
          rechercher_poste_chemp_par_competences_et_code_postale(gr,g,4,12200) ;
      }
-     */
+     
      // Tests de fonction rechercher_employe_chemp_par_entreprise et par_competences  .
      {
          FILE *db = fopen("test/poste.csv", "r");
          groupe_postes *gr = gp_open(db);
-         fclose(db);
+         //fclose(db);
 
          voir_postes(gr) ;
 
