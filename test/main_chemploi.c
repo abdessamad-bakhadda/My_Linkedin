@@ -121,7 +121,7 @@ int main()
         //fclose(db);
         voir_employes(gr) ;
         transitionner_employe_chempl(gr,g,2) ;
-        EST(emp_size(gr) == 3);
+        TEST(emp_size(gr) == 3);
         voir_employes(gr) ;
         TEST(gchemp_size(g) == 7);
         voir_chemplois(g) ;
