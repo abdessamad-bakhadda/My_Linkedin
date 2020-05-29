@@ -66,7 +66,7 @@ int main()
         {
              TEST(g!= NULL);
              TEST(gp_size(g) == 5);
-             voir_postes(g) 
+             voir_postes(g) ;
 
         }
         
