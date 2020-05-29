@@ -64,7 +64,7 @@ groupe_entreprises* ge_open(FILE *db){
                 ind_tmp = 0 ;
             }
         }
-        fclose(f);
+        //fclose(f);
     }
     return g;
 }
