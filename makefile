@@ -43,8 +43,8 @@ build/libgroupe_employe.a: build/groupe_employe.o  | build
 build/libgroupe_chemploi.a: build/groupe_chemploi.o  | build
 	ar crs build/libgroupe_chemploi.a build/groupe_chemploi.o
 ##
-build/test.o: test/main_entreprise.c | build
-	clang -Wall -pedantic  -g -c test/main_entreprise.c -I ./lib -o build/test.o
+build/test.o: test/main_poste.c | build
+	clang -Wall -pedantic  -g -c test/main_poste.c -I ./lib -o build/test.o
 
 
 
