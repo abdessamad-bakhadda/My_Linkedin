@@ -77,7 +77,7 @@ int main()
           voir_chemplois(g) ;
      }
 
-     
+     /*
      // Tests de fonction rechercher_chemploi_par_competences et par_competences_et_code_postale  .
      {
          rechercher_chemploi_par_competences(g,1) ;
@@ -87,6 +87,7 @@ int main()
          rechercher_chemploi_par_competences_et_code_postale(g,2,13009) ;
          rechercher_chemploi_par_competences_et_code_postale(g,3,12200) ;
      }
+     */
 
      // Tests de fonction creer_profil_chemploi
      {
