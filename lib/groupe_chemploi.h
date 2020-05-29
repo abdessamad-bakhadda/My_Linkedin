@@ -2,7 +2,7 @@
 
 #include "liste.h"
 #include "groupe_employe.h"
-#include "groupe_poste.h"
+
 
 #include <stdbool.h>
 #include <stdio.h>
