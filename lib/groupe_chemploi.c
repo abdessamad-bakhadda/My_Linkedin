@@ -27,7 +27,7 @@ groupe_chemplois* gch_open(FILE *db){
 
     FILE *dba = fopen("test/employe.csv", "r");
     groupe_employes* gr = gemp_open(dba);
-    fclose(dba);
+    //fclose(dba);
 
     if(f)
     {
@@ -141,7 +141,7 @@ groupe_chemplois* gch_open(FILE *db){
             }
             tmp1 = tmp1->next ;
         }
-        fclose(f);
+        //fclose(f);
     }
     return g;
 }
@@ -183,7 +183,7 @@ void rechercher_chemploi_par_competences(groupe_chemplois * g,int id_poste)
 
     FILE *db = fopen("test/poste.csv", "r");
     groupe_postes *gr = gp_open(db);
-    fclose(db);
+    //fclose(db);
     poste * ptrf = gp_id(gr,id_poste) ;
     chemploi * chemp ;
     i = 0 ;
@@ -238,7 +238,7 @@ void rechercher_chemploi_par_competences_et_code_postale(groupe_chemplois * g,in
 
     FILE *db = fopen("test/poste.csv", "r");
     groupe_postes *gr = gp_open(db);
-    fclose(db);
+    //fclose(db);
     poste * ptrf = gp_id(gr,id_poste) ;
     //code_postale = ptrf->entrep->code_postale ; selon idee de code_postale
     chemploi * chemp ;
@@ -321,7 +321,7 @@ void creer_profil_chemploi(groupe_chemplois * g)
     scanf("%d",&nb_employe) ;
     FILE *db = fopen("test/employe.csv", "r");
     groupe_employes* gr = gemp_open(db);
-    fclose(db);
+    //fclose(db);
     for(i = 0 ;i< nb_employe ;i++)
     {
         printf("id_employe = ",id_employe) ;
@@ -343,7 +343,7 @@ void modifier_profil_chemploi(groupe_chemplois * g,int id_chemploi)
     int i,j,nb_competences ,id_employe,nv_code_postale ;
     FILE *db = fopen("test/employe.csv", "r");
     groupe_employes* gr = gemp_open(db);
-    fclose(db);
+    //fclose(db);
     chemploi * ptr = gchemp_id(g,id_chemploi) ;
 
     switch(choix)
@@ -424,7 +424,7 @@ void transitionner_chempl_employe(groupe_chemplois *g,groupe_employes *gr,int id
     }
     FILE *db2 = fopen("test/entreprise.csv", "r");
     groupe_entreprises * gr2 = ge_open(db2);
-    fclose(db2);
+    //fclose(db2);
 
     ptremp->entrep = ge_id(gr2,id_entreprise) ;
     l_append(&(gr->employes),l_make_node((employe*)ptremp)) ;
@@ -469,7 +469,7 @@ void transitionner_employe_chempl(groupe_employes *g,groupe_chemplois *gr,int id
 
     FILE *db2 = fopen("test/entreprise.csv", "r");
     groupe_entreprises * gr2 = ge_open(db2);
-    fclose(db2);
+    //fclose(db2);
 
     //employe * pt2 ;
 
