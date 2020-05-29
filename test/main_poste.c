@@ -87,7 +87,7 @@ int main()
             voir_postes(g) ;
         }
 
-
+        /*
         // Tests de fonction rechercher_employe_par_competences et par_competences_et_code_postale  .
         {
             rechercher_employe_par_competences(g,1) ;
@@ -101,5 +101,6 @@ int main()
             rechercher_employe_par_competences_et_code_postale(g,3,12200) ;
             rechercher_employe_par_competences_et_code_postale(g,4,12200) ;
         }
+        */
         
 }
