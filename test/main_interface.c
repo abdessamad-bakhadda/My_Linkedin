@@ -15,7 +15,7 @@ int main_interface()
     // entreprise
     FILE *db1 = fopen("test/entreprise.csv", "r");
     groupe_entreprises *ge = ge_open(db1);
-    fclose(db1);
+    //fclose(db1);
 
     voir_entreprises(ge) ;
     int id_entreprise ;
@@ -23,14 +23,14 @@ int main_interface()
     // poste
     FILE *db2 = fopen("test/poste.csv", "r");
     groupe_postes *gp = gp_open(db2);
-    fclose(db2);
+    //fclose(db2);
 
     voir_postes(gp) ;
     int id_poste ;
     // employe
     FILE *db3 = fopen("test/employe.csv", "r");
     groupe_employes *gemp = gemp_open(db3);
-    fclose(db3);
+    //fclose(db3);
 
     voir_employes(gemp) ;
     int id_employe ;
@@ -38,7 +38,7 @@ int main_interface()
     // chemploi
     FILE *db4 = fopen("test/chemploi.csv", "r");
     groupe_chemplois *gchemp = gch_open(db4);
-    fclose(db4);
+    //fclose(db4);
 
     voir_chemplois(gchemp) ;
     int id_chemploi ;
