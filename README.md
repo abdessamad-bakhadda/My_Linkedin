@@ -1,4 +1,4 @@
-![](https://github.com/abdessamad-bakhadda/projet)
+![](https://github.com/abdessamad-bakhadda/projet/workflows/Test%20master/badge.svg)
 
 # DevCommeLesPros-2020-Projet
 
