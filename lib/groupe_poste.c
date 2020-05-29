@@ -8,7 +8,7 @@
 #include <string.h>
 
 ////////////////////////////////////////////////////////// POSTE  ////////////////////////////////////////////////
-groupe_postes* gp_open(FILE *db,groupe_entreprises* gr){
+groupe_postes* gp_open(FILE *db,groupe_entreprises* gr,groupe_entreprises * gr){
     FILE *f;
     char c;
     int ligne = 1 ,ind_sortie_virgule = 0  ,ind_sortie_pt_virgule = 0 , indice_noeud  ;
