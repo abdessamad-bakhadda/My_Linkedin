@@ -59,6 +59,8 @@ int main()
             g = gp_open(db);
             //fclose(db);
         }
+        FILE *db = fopen("test/entreprise.csv", "r");
+        groupe_entreprises * gr = ge_open(db,gr);
 
         // Tests des fonctiosn g_open et gp_size.
         {
@@ -70,7 +72,7 @@ int main()
         
         //test cree_profile_poste
         {
-            cree_profile_poste(g) ;
+            cree_profile_poste(g,gr) ;
             TEST(gp_size(g) == 5);
             voir_postes(g) ;
         }
