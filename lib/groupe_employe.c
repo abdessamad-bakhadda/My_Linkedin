@@ -31,7 +31,7 @@ groupe_employes* gemp_open(FILE *db){
 
     FILE *dba = fopen("test/entreprise.csv", "r");
     groupe_entreprises* gr = ge_open(dba);
-    fclose(dba);
+    //fclose(dba);
 
     if(f)
     {
@@ -141,7 +141,7 @@ groupe_employes* gemp_open(FILE *db){
             }
             tmp1 = tmp1->next ;
         }
-        fclose(f);
+        //fclose(f);
     }
     return g;
 }
