@@ -1,5 +1,5 @@
 #include "groupe_poste.h"
-#include "groupe_entreprise.h"
+
 #include "liste.h"
 
 #include <stdbool.h>
