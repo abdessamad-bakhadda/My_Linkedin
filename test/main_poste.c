@@ -67,7 +67,7 @@ int main()
              voir_postes(g) ;
 
         }
-        /*
+        
         //test cree_profile_poste
         {
             cree_profile_poste(g) ;
@@ -101,5 +101,5 @@ int main()
             rechercher_employe_par_competences_et_code_postale(g,3,12200) ;
             rechercher_employe_par_competences_et_code_postale(g,4,12200) ;
         }
-        */
+        
 }
