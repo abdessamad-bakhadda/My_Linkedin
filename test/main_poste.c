@@ -73,7 +73,7 @@ int main()
         //test cree_profile_poste
         {
             cree_profile_poste(g) ;
-            TEST(gp_size(g) == 5);
+            TEST(gp_size(g) == 6);
             voir_postes(g) ;
         }
 
@@ -82,10 +82,10 @@ int main()
         //test supprime_profile_poste
         {
             supprimer_profile_poste(g,1) ;
-            TEST(gp_size(g) == 3);
+            TEST(gp_size(g) == 5);
             voir_postes(g) ;
             supprimer_profile_poste(g,4) ;
-            TEST(gp_size(g) == 2);
+            TEST(gp_size(g) == 4);
             voir_postes(g) ;
         }
 
